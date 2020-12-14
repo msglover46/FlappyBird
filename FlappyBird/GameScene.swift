@@ -328,6 +328,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             userDefaults.set(bestScore, forKey: "BEST")
             userDefaults.synchronize()
         }
+        
+        if score == 40 {
+            clearPlayer.play()
+        }
     }
     
     // SKPhysicsContactDelegateのメソッド。衝突した時に呼ばれる。
